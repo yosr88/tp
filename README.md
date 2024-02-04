@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Memory Game avec Supabase
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ce projet est un jeu de mémoire développé avec React. Il utilise Supabase pour stocker et récupérer les images des cartes du jeu. Chaque carte du jeu est une image d'animal que j'ai récupérée en utilisant l'API Unsplash, et j'utilise Supabase comme backend pour gérer l'état du jeu et le score des utilisateurs.
 
-## Available Scripts
+## Fonctionnalités
 
-In the project directory, you can run:
+- Jeu de mémoire avec des cartes d'animaux
+- Score dynamique qui s'incrémente avec chaque paire trouvée
+- Intégration avec Supabase pour la persistance des données
 
-### `npm start`
+## Étapes de Développement
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Configuration de Supabase :**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   - J'ai commencé par créer un compte sur Supabase et configuré un nouveau projet.
+   - J'ai ensuite créé une table 'mon-app-react' avec les champs id et image_url pour stocker les images pour les cartes
 
-### `npm test`
+2. **Intégration de l'API Unsplash :**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   - J'ai récupéré les URLs des images d'animaux à l'aide de l'API Unsplash.
+   - J'ai inséré ces URLs dans ma table Supabase pour les utiliser dans le jeu.
 
-### `npm run build`
+3. **Développement de l'Application React :**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   - J'ai utilisé `create-react-app` pour initialiser mon projet React.
+   - J'ai développé les composants du jeu, y compris les cartes et la logique de jeu.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Connexion avec Supabase :**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   - J'ai intégré le client JavaScript de Supabase dans mon application React dans le fichier supabaseClient.js
+   - J'ai utilisé Supabase pour récupérer les images des cartes et gérer le score.
 
-### `npm run eject`
+5. **Gestion des Variables d'Environnement :**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   - J'ai configuré les variables d'environnement pour stocker ma clé API Supabase.
+   - J'ai veillé à ne pas exposer ma clé API en la plaçant dans un fichier `.env` à la racine du projet.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6. **Tests et Débogage :**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   - J'ai testé mon application localement pour m'assurer que tout fonctionnait correctement.
+   - J'ai débogué les problèmes en utilisant les outils de développement de mon navigateur et chatgpt.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+7. **Rédaction de ce README :**
+   - Enfin, j'ai rédigé ce README pour expliquer mon projet et les étapes suivies pour le développer.
